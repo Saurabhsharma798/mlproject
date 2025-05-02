@@ -78,20 +78,20 @@ class DataTransformation:
             input_feature_test_df=test_df.drop(columns=[target_column_name],axis=1)
             target_feature_test_df=test_df[target_column_name]
 
-            print("Train columns:", input_feature_train_df.columns.tolist())
-            print("Expected numerical columns:", ["writing score", "reading score"])
-            print("""Expected categorical columns:", [
-                "gender",
-                "race_ethnicity",
-                "parental_level_of_education",
-                "lunch",
-                "test_preparation_course",
-                ]""")
+            # print("Train columns:", input_feature_train_df.columns.tolist())
+            # print("Expected numerical columns:", ["writing score", "reading score"])
+            # print("""Expected categorical columns:", [
+            #     "gender",
+            #     "race_ethnicity",
+            #     "parental_level_of_education",
+            #     "lunch",
+            #     "test_preparation_course",
+            #     ]""")
            
             
-            print("\n--- DEBUG INFO ---")
-            print("Train Columns:", input_feature_train_df.columns.tolist())
-            print("Test Columns:", input_feature_test_df.columns.tolist())
+            # print("\n--- DEBUG INFO ---")
+            # print("Train Columns:", input_feature_train_df.columns.tolist())
+            # print("Test Columns:", input_feature_test_df.columns.tolist())
 
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
